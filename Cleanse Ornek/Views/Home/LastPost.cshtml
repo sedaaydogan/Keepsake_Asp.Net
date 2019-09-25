@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="widget posts">
+    <h5>Posts</h5>
+    <div class="widget-tabs">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#popular" data-toggle="tab">Popular</a></li>
+            <li><span>/</span></li>
+            <li><a href="#fresh" data-toggle="tab">Fresh</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="popular">
+                <ul>
+                   
+                    @foreach (var m in ViewBag.populer)
+                    {
+                        <li>
+                            <figure>
+                                <a href="/Makale/Detay/@m.id">
+                                    <img src="@m.Resim.kckResimYol" alt="" />
+                                </a>
+                            </figure>
+                            <div class="text text-center" style="display:flex;justify-content:space-around">
+                                <div><a href="/Makale/Detay/@m.id">@m.baslik</a></div>
+                                <div><a href="/Kategori/Index/@m.kategoriId">@m.Kategori.adi</a></div>
+                            </div>
+
+                        </li>
+                    }
+
+                </ul>
+            </div>
+            <div class="tab-pane" id="fresh">
+                <ul>
+                    @foreach (var f in ViewBag.fresh)
+                    {
+                        <li>
+                            <figure>
+                                <a href="/Makale/Detay/@f.id">
+                                    <img src="@f.Resim.kckResimYol" alt="" />
+                                </a>
+                            </figure>
+                            <div class="text text-center" style="display:flex;justify-content:space-around">
+                                <div><a href="/Makale/Detay/@f.id">@f.baslik</a></div>
+                                <div><a href="/Kategori/Index/@f.kategoriId">@f.Kategori.adi</a></div>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

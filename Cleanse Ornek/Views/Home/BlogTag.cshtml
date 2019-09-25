@@ -1,0 +1,15 @@
+﻿@using Cleanse_Ornek.Models
+@model List<Etiket>
+@{
+    Layout = null;
+}
+
+<div class="widget blog-tags">
+    <h5>Blog tags</h5>
+    <ul>
+        @foreach (var e in Model)
+        {
+            <li><a href="/Etiket/Index/@e.id" class="btn btn-default">@e.adi [ @e.Makales.Count ]</a></li>
+        }
+    </ul>
+</div>

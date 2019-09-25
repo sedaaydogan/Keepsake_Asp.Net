@@ -1,0 +1,20 @@
+﻿@using Cleanse_Ornek.Models
+@model List<Kategori>
+@{
+    Layout = null;
+}
+
+
+<h2>CategoryTag</h2>
+
+<div class="widget categories">
+    <h5>Categories</h5>
+    <ul>
+        @foreach (var k in Model)
+        {
+            <li><a href="/Kategori/MakaleListele/@k.id">@k.adi</a></li>
+
+        }
+
+    </ul>
+</div>

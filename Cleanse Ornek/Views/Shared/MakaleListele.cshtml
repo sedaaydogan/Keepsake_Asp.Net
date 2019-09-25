@@ -1,0 +1,41 @@
+﻿@using Cleanse_Ornek.Models
+@model List<Makale>
+@{
+    Layout = null;
+}
+
+@foreach (var m in Model)
+{
+
+<article class="blog-post">
+    <header>
+        <h2>
+            <a href="/Makale/Detay/@m.id">Pastry fruitcake buiscuit chupa<br />
+            </a>
+        </h2>
+        <ul class="info">
+            <li><a href="/Kategori/MakaleListele/@m.kategoriId"> @m.Kategori.adi </a></li>
+            <li><a href="#"> @m.yayinTarihi </a></li>
+            <li><a href="#"> @m.Yazar.adi </a></li>
+            <li> Comments: <a href="#">12</a> </li>
+        </ul>
+    </header>
+    <div class="content">
+        <figure>
+            <a href="#">
+                <img src="content/article02.jpg" alt="" />
+            </a>
+        </figure>
+        <div class="text">
+            Icing chocolate bar lollipop applicake apple pie toffee.
+            Jujubes candy canes danish bonbon applicake chocolate bar unerdwear.com cookie.
+            Sesame snaps carrot cake gummi bears sugar plum jujubes cotton candy.
+            Wafer dessert jelly-o. Jelly beans macaroon croissant ice cream cake cookie.
+            Macaroon jelly croissant chupa chups applicake pie chupa chups tootsie roll.
+            Dessert marshmallow dragée pudding ice cream cupcake. Cupcake chocolate lollipop bear claw gummi bears.
+            Toffee applicake chupa chups sugar plum ice cream dessert jelly beans donut.
+        </div>
+        <a href="#" class="btn btn-default">Read more</a>
+    </div>
+</article>
+}
